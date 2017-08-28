@@ -51,6 +51,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'New Project',
+        welcomeMessage: 'This is my project',
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: "Bad Data"
